@@ -6,8 +6,7 @@ $(document).ready(function() {
 		var output = fizzBuzz(input);
 
 		console.log(output);
-		$('body').append("<p>"+output+"<p>");
-
+		$('#output').text(output);
 
 	})
 
