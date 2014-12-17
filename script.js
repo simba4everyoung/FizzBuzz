@@ -1,17 +1,8 @@
 $(document).ready(function() {
-
-	$('button').on('click',function() {
-		var input = $('#input').val();
-		
-		var output = fizzBuzz(input);
-
-		console.log(output);
-		$('#output').text(output);
-
-	})
+	
 
 
-	var fizzBuzz = function(count) {
+	var fizzBuzz = function(count) {	//It's better to put the function expression at the top of the scope.
 		count = +count;		/*Transfer the type from string to number*/
 		var num;
 
@@ -30,11 +21,23 @@ $(document).ready(function() {
 			else {
 				num=count;
 			}
-			/*var listNum="<p>" + num + "</p>";*/
 
 			return num;
 		
 	}
+
+
+	$('button').on('click',function() {
+		var input = $('#input').val();
+		var output = fizzBuzz(input);
+		
+		console.log(output);
+		$('#output').text(output);
+	});
+	//$(document).on('keydown','13',calculate());
+
+
+	
 
 })
 
